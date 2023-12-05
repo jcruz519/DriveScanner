@@ -8,3 +8,5 @@ To build:
 'make dev' for debug version to be run on gdb
 'make prod' for release version
 'make clean' remove executables and object files
+
+./scan and ./scanDebug are the executables respectively the release and debug versions.
