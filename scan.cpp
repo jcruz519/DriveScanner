@@ -8,7 +8,7 @@ static const string THIS_PROD = "./scan";
 int main()
 {
    // scan for file paths
-   FILE * pathStream = popen("tree -if .", "r");
+   FILE * pathStream = popen("dir /s /b", "r");
    
    // record file names
    char * filePtr = 0;
@@ -48,7 +48,8 @@ int main()
    for(regex expression : expressions)
    {
       vector<string> results = searchAlgorithm(read, expression);
-
+      
+      // report findings
       for(string result : results) 
       {
          if(report.is_open()) { report << result << endl; }
