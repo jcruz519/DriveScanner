@@ -8,7 +8,7 @@ static const string THIS_PROD = "./scan";
 int main()
 {
    // scan for file paths
-   FILE * pathStream = popen("dir /s /b", "r");
+   FILE * pathStream = popen("tree -if", "r");
    
    // record file names
    char * filePtr = 0;
